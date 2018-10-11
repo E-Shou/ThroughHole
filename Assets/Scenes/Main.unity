@@ -1133,6 +1133,7 @@ GameObject:
   - component: {fileID: 1402458080}
   - component: {fileID: 1402458079}
   - component: {fileID: 1402458078}
+  - component: {fileID: 1402458081}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1194,12 +1195,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1402458077}
   m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 3, z: -4.5}
+  m_LocalPosition: {x: 0, y: 3, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
+--- !u!114 &1402458081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402458077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f864ac683213b5e4e9202ede91b63c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1600318627}
+  followSpeed: 5
 --- !u!1001 &1600318626
 Prefab:
   m_ObjectHideFlags: 0
@@ -1239,9 +1253,49 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 65915157319025730, guid: 962915a73a76cf247a2fcacf48ddddd9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 962915a73a76cf247a2fcacf48ddddd9, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1600318627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1481171228611508, guid: 962915a73a76cf247a2fcacf48ddddd9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1600318626}
+--- !u!143 &1600318628
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600318627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1600318629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600318627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37a2949f6fa59141bcc13de0454a75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedZ: 5
+  accelerationZ: 10
 --- !u!1001 &1613550852
 Prefab:
   m_ObjectHideFlags: 0

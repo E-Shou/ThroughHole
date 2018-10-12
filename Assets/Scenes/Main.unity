@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1600318627}
-  followSpeed: 5
+  followSpeed: 10
 --- !u!1001 &1600318626
 Prefab:
   m_ObjectHideFlags: 0

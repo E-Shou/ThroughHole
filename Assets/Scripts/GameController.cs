@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
     public PlayerController cube;
     public Text scoreLabel;
+    public GameObject buttons;
+    public GameObject textGameOver;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,12 @@ public class GameController : MonoBehaviour {
     int CalcScore()
     {
         return (int)cube.transform.position.z;
+    }
+
+    public void GameOver()
+    {
+        textGameOver.SetActive(true);
+        Invoke("ReturnToTitle", 2.0f);
     }
 
     void ReturnToTitle()

@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("up")) MoveToUp();
-        if (Input.GetKeyDown("down")) MoveToDown();
-        if (Input.GetKeyDown("left")) MoveToLeft();
-        if (Input.GetKeyDown("right")) MoveToRight();
+        if (Input.GetKey("up")) MoveToUp();
+        if (Input.GetKey("down")) MoveToDown();
+        if (Input.GetKey("left")) MoveToLeft();
+        if (Input.GetKey("right")) MoveToRight();
         if (Input.GetKeyDown("z")) ChangeCube();
         if (Input.GetKeyDown("x")) ChangeOblong();
         if (Input.GetKeyDown("c")) ChangeVertical();
@@ -36,22 +36,22 @@ public class PlayerController : MonoBehaviour
 
     public void MoveToLeft()
     {
-        transform.Translate(-1, 0, 0);
+            transform.Translate(-0.25f, 0f, 0f);
     }
 
     public void MoveToRight()
     {
-        transform.Translate(1, 0, 0);
+            transform.Translate(0.25f, 0f, 0f);
     }
 
     public void MoveToDown()
     {
-        transform.Translate(0, -1, 0);
+            transform.Translate(0f, -0.25f, 0f);
     }
 
     public void MoveToUp()
     {
-        transform.Translate(0, 1, 0);
+            transform.Translate(0f, 0.25f, 0f);
     }
 
     public void ChangeCube()

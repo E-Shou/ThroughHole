@@ -1520,7 +1520,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 69.944275
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1545,7 +1545,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1402458077}
   m_LocalRotation: {x: 0.026176924, y: 0, z: 0, w: 0.99965733}
-  m_LocalPosition: {x: 0, y: 2, z: -4}
+  m_LocalPosition: {x: 0, y: 2.96, z: -3.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1562,8 +1562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f864ac683213b5e4e9202ede91b63c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1600318627}
-  followSpeed: 10
+  target: {fileID: 1402458077}
+  speedZ: 5
 --- !u!1001 &1600318626
 Prefab:
   m_ObjectHideFlags: 0
@@ -1626,7 +1626,7 @@ Prefab:
     - target: {fileID: 114422171877618680, guid: c70d5d00e60d0644580d3d0e6d3138fe,
         type: 2}
       propertyPath: speedZ
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114422171877618680, guid: c70d5d00e60d0644580d3d0e6d3138fe,
         type: 2}
@@ -1646,6 +1646,26 @@ Prefab:
     - target: {fileID: 65043661488451686, guid: c70d5d00e60d0644580d3d0e6d3138fe,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422171877618680, guid: c70d5d00e60d0644580d3d0e6d3138fe,
+        type: 2}
+      propertyPath: MaxLaneX
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422171877618680, guid: c70d5d00e60d0644580d3d0e6d3138fe,
+        type: 2}
+      propertyPath: MinLaneX
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422171877618680, guid: c70d5d00e60d0644580d3d0e6d3138fe,
+        type: 2}
+      propertyPath: MaxHight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114422171877618680, guid: c70d5d00e60d0644580d3d0e6d3138fe,
+        type: 2}
+      propertyPath: MinDown
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:

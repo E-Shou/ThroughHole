@@ -6,19 +6,14 @@ public class SimpleFollow : MonoBehaviour {
     Vector3 diff;
 
     public GameObject target;
-    public float followSpeed;
+    public float speedZ;
 
-	// Use this for initialization
-	void Start () {
-        diff = target.transform.position - transform.position;
+    // Use this for initialization
+    void Start () {
     }
 
     // Update is called once per frame
     void LateUpdate () {
-        transform.position = Vector3.Lerp(
-            transform.position,
-            target.transform.position - diff,
-            Time.deltaTime * followSpeed
-            );
+        target.transform.localPosition += new Vector3(0f, 0f, speedZ * Time.deltaTime);
     }
 }
